@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
+# In[12]:
 
 
 #import libraries 
@@ -10,8 +10,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import style
 import seaborn as sns
+import streamlit as St
 style.use('seaborn-darkgrid')
-get_ipython().run_line_magic('matplotlib', 'inline')
 
 # Import the data
 df = pd.read_csv('Deep Dive Table (7).csv')
@@ -301,4 +301,10 @@ df['Campaign Stage'] = np.where(df['Date'] > episode_dict_df.iloc[0,0], 'Sustain
 df['Campaign Stage'] = np.where(df['Date'] >= episode_dict_df.iloc[-1,0], 'All Eps',df['Campaign Stage'])
 
 df.to_csv('Cleaned_data.csv')
+
+
+# In[ ]:
+
+
+
 
